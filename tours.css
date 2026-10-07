@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+nav {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    margin: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+.photo-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container2 {
+    width: 90%;
+    max-width: 700px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 40px auto;
+    box-sizing: border-box;
+}
+
+.event {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.event:last-child {
+    border-bottom: none;
+}
+
+.event .info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 150px;
+}
+
+.event .info .genre {
+    font-size: 12px;
+    color: #888;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.event .info .artist {
+    font-weight: bold;
+    color: #333;
+}
+
+.event .date {
+    text-align: center;
+    margin-right: 20px;
+}
+
+.event .date .day {
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+}
+
+.event .date .weekday {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #888;
+}
+
+.event .city {
+    font-size: 14px;
+    color: #555;
+}
+
+.event .status {
+    font-size: 12px;
+    color: #888;
+}
+
+.event .artist.red {
+    color: red;
+}
+
+.buy-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.1s, background-color 0.2s;
+}
+
+.buy-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.buy-button:active {
+    transform: scale(0.95);
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: block;
+        text-align: center;
+        margin: 10px;
+    }
+    nav a {
+        display: block;
+        margin: 8px 0;
+        font-size: 16px;
+    }
+    .photo-container {
+        width: 100px;
+        height: 100px;
+        bottom: 10px;
+        left: 10px;
+    }
+    .container2 {
+        width: 95%;
+        padding: 15px;
+        margin: 20px auto;
+    }
+    .event {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .event .date {
+        margin-right: 0;
+    }
+}
